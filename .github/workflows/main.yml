@@ -11,7 +11,7 @@ jobs:
         with:
           python-version: "3.x"
       - run: pip install bandit
-      - run: bandit -r dsvpwa -f html -o report.html --exit-zero
+      - run: bandit dsvpwa.py -f html -o report.html --exit-zero
       - uses: actions/upload-artifact@v4
         with:
           name: report
